@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(100,149,237);
+}
+
+#titulo{
+    text-align: left;
+    margin-left: 380px;
+    color: white;
+}
+
+.geral{
+    display: inline-flex;
+}
+
+.conversores{
+    color: white;
+    text-align: left;
+    border-radius: 25px 25px 25px 25px;
+    border: 5px solid black;
+    margin-top: 80px;
+    padding: 50px;
+}
+.resultado{
+    border-radius: 25px 25px 25px 25px;
+    border: solid black;
+    padding: 10px;
+}
+.selecione{
+    font-size: large;
+}

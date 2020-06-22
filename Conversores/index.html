@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertendo</title>
+    <link rel="stylesheet" href="style.css" type="css/text">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="icone.png" rel="icon" sizes="64x64" type="image/png">
+</head>
+<body>
+<div id="titulo">
+    <h1>Escolha o conversor e use:</h1>
+</div>
+<div class="conversores">
+    <h2>Medidas</h2>
+    
+        <div>
+                <div id="">
+                    <p class="selecione">Selecione a medida de entrada:</p>
+                    <input type="radio" name="medidaIn" value="quilometro"  checked/> Quilômetro (km)
+                    <br><input type="radio" name="medidaIn" value="metro"/> Metro (m)
+                    <br><input type="radio" name="medidaIn" value="centimetro"/> Centímetro (cm)
+                    <br><input type="radio" name="medidaIn" value="milimetro"/> Milímetro (mm)
+                    <br><input type="radio" name="medidaIn" value="micrometro"/> Micrômetro (µm)
+                    <br><input type="radio" name="medidaIn" value="nanometro"/> Nanômetro (nm)
+                    <br><input type="radio" name="medidaIn" value="milha"/> Milha (mi)
+                    <br><input type="radio" name="medidaIn" value="jarda"/> Jarda (yd)
+                    <br><input type="radio" name="medidaIn" value="pe"/> Pé (ft)
+                    <br><input type="radio" name="medidaIn" value="polegada"/> Polegada (in)
+                    <br><input type="radio" name="medidaIn" value="nautica"/> Milha Náutica (mn)
+
+                </div>
+                <br><label for="valorM">Valor:</label>
+                <input id="valorM" type="number" step="0.01" value="10"/>
+                <div>
+                    <p class="selecione">Selecione a medida de saída:</p>
+                    <input type="radio" name="medidaOut" value="quilometro"/> Quilômetro (km)
+                    <br><input type="radio" name="medidaOut" value="metro" checked/> Metro (m)
+                    <br><input type="radio" name="medidaOut" value="centimetro"/> Centímetro (cm)
+                    <br><input type="radio" name="medidaOut" value="milimetro"/> Milímetro (mm)
+                    <br><input type="radio" name="medidaOut" value="micrometro"/> Micrômetro (µm)
+                    <br><input type="radio" name="medidaOut" value="nanometro"/> Nanômetro (nm)
+                    <br><input type="radio" name="medidaOut" value="milha"/> Milha (mi)
+                    <br><input type="radio" name="medidaOut" value="jarda"/> Jarda (yd)
+                    <br><input type="radio" name="medidaOut" value="pe"/> Pé (ft)
+                    <br><input type="radio" name="medidaOut" value="polegada"/> Polegada (in)
+                    <br><input type="radio" name="medidaOut" value="nautica"/> Milha Náutica (mn)
+                </div>
+                <br><button onclick="converterMedida();">Converter!</button>
+                <br><br><div id="resultadoM" class="resultado">
+                    Valor Convertido =
+                  </div>    
+        </div>      
+</div>    
+
+        <div class="conversores">
+            <h2>Temperatura</h2>
+            
+                <div>
+                        <div>
+                            <p class="selecione">Selecione a temperatura de entrada:</p>
+                            <input type="radio" name="temperaturaIn" value="celsius"  checked/> Celsius (°C)
+                            <br><input type="radio" name="temperaturaIn" value="fahrenheit"/> Fahrenheit (°F)
+                            <br><input type="radio" name="temperaturaIn" value="kelvin"/> Kelvin (K)
+                        </div>
+                        <br><label for="valorT">Valor:</label>
+                        <input id="valorT" type="number" step="0.01" value="10"/>
+                        <div>
+                            <p class="selecione">Selecione a temperatura de saída:</p>
+                            <input type="radio" name="temperaturaOut" value="celsius"/> Celsius (°C)
+                            <br><input type="radio" name="temperaturaOut" value="fahrenheit" checked/> Fahrenheit (°F)
+                            <br><input type="radio" name="temperaturaOut" value="kelvin"/> Kelvin (K)
+                        </div>
+                        <br><button onclick="converterTemperatura();">Converter!</button>
+                        <br><br><div id="resultadoT" class="resultado">
+                            Valor Convertido =
+                          </div>    
+                </div>      
+        </div>    
+
+        <div class="conversores">
+            <h2>Velocidade</h2>
+            
+                <div>
+                        <div>
+                            <p class="selecione">Selecione a unidade de velocidade de entrada:</p>
+                            <br><input type="radio" name="velocidadeIn" value="kmh" checked/> Quilômetro por hora (km/h)
+                            <br><input type="radio" name="velocidadeIn" value="ms"/> Metros por segundo (m/s)
+                            <br><input type="radio" name="velocidadeIn" value="mih"/> Milha por hora (mi/h)
+                            <br><input type="radio" name="velocidadeIn" value="no"/> Nó
+                            <br><input type="radio" name="velocidadeIn" value="fts"/> Pés por segundo (ft/s)
+
+                        </div>
+                        <br><label for="valorV">Valor:</label>
+                            <input id="valorV" type="number" step="" value="10"/>
+                        <div>
+                            <p class="selecione">Selecione a unidade de velocidade de saída:</p>
+                            <input type="radio" name="velocidadeOut" value="kmh"/> Quilômetro por hora (km/h)
+                            <br><input type="radio" name="velocidadeOut" value="ms" checked/> Metros por segundo (m/s)
+                            <br><input type="radio" name="velocidadeOut" value="mih"/> Milha por hora (mi/h)
+                            <br><input type="radio" name="velocidadeOut" value="no"/> Nó
+                            <br><input type="radio" name="velocidadeOut" value="fts"/> Pés por segundo (ft/s)
+                            </div>
+                        <br><button onclick="converterVelocidade();">Converter!</button>
+                        <br><br><div id="resultadoV" class="resultado">
+                            Valor Convertido =
+                            </div>    
+        </div>      
+
+    </div>
+</div>
+</body>
+</html>
+
